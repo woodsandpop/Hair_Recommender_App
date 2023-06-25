@@ -1,6 +1,9 @@
 # YOLOv5 requirements
 # Usage: pip install -r requirements.txt
 
+wget>=3.2
+streamlit>=1.23.1
+detect>==2020.12.3
 # Base ------------------------------------------------------------------------
 gitpython>=3.1.30
 matplotlib>=3.3
