@@ -93,7 +93,7 @@ def imageInput(src):
 
     elif src == 'From sample Hairstyle Images': 
         # Image selector slider
-        imgpath = glob.glob('C:/Users/46058007/OneDrive - MMU/Attachments/Stylebook/Hair_recommendation_app/dataset/images/train/') #should be the same as what the similarity algorithm was trained on
+        imgpath = glob.glob('data/images/test/') #should be the same as what the similarity algorithm was trained on
         imgsel = st.slider('Select random images from test set.', min_value=1, max_value=len(imgpath), step=1) 
         image_file = imgpath[imgsel-1]
         # image_select = cos_similarities.columns[imgsel]
