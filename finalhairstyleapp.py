@@ -13,7 +13,6 @@ from datetime import datetime
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-
 # Function to display similar images with scores
 def display_similar_images(image_list, score_list):
     for i in range(len(image_list)):
