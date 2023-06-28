@@ -34,7 +34,7 @@ def imageInput(src):
     cos_similarities = pd.read_csv('simi.csv', index_col=0)
 
     if src == 'Upload your own Hairstyle Image':
-        image_file = st.file_uploader("Upload An Image", type=['png', 'jpeg', 'jpg'])
+        image_file = st.file_uploader("Upload Your desired hairstyle image", type=['png', 'jpeg', 'jpg'])
         col1, col2 = st.columns(2)
         if image_file is not None:
             img = Image.open(image_file)
@@ -55,7 +55,7 @@ def imageInput(src):
             #--Display predicton
             img_ = Image.open(outputpath)
             with col2:
-                st.image(img_, caption='AI Hairstyle Recommendation', use_column_width=True)
+                st.image(img_, caption='AI Hairstyle Recommender', use_column_width=True)
 
             # Button to trigger the similarity prediction
             if st.button('Predict Similar Hairstyles'):
