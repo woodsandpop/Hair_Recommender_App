@@ -24,7 +24,6 @@ def display_similar_images(image_list, score_list):
 def imageInput(src):
     # Load pretrained model
     load_pretrained_model_weight = ResNet50(weights='imagenet')
-
     # Use this to extract features before the final layer
     feature_extractor = Model(inputs=load_pretrained_model_weight.input,
                     outputs=load_pretrained_model_weight.get_layer("avg_pool").output)
@@ -93,7 +92,7 @@ def imageInput(src):
 
     elif src == 'From sample Hairstyle Images': 
         # Image selector slider
-        imgpath = glob.glob('data/images/test/*') #should be the same as what the similarity algorithm was trained on
+        imgpath = glob.glob('C:/Users/46058007/OneDrive - MMU/Attachments/Stylebook/Hair_recommendation_app/dataset/images/train/*') #should be the same as what the similarity algorithm was trained on
         imgsel = st.slider('Select random images from test set.', min_value=1, max_value=len(imgpath), step=1) 
         image_file = imgpath[imgsel-1]
         # image_select = cos_similarities.columns[imgsel]
